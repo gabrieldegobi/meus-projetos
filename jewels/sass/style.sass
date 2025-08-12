@@ -1,0 +1,183 @@
+*
+    margin: 0
+    padding: 0
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
+@import 'mixins.sass'
+:root
+    --font-first: "Montserrat", sans-serif
+    --font-second: 'Edu NSW ACT Cursive', cursive
+
+.max-width
+    @include width()
+ 
+   
+
+.nav-bar
+    border-bottom: 1px solid #bcbcbcff
+    background-color: #EAD9CE
+
+    .navegation
+        display: flex
+        justify-content: space-between
+        padding: 20px 0
+        align-items: center
+        
+        nav
+            display: flex
+            gap: 20px
+
+            ul
+                list-style: none
+                display: flex
+                gap: 20px
+
+                li
+
+                    a
+                        text-decoration: none
+                        color: #000
+                        font-family: var(--font-first)
+        h1
+            font-size: 2rem
+            font-weight: bold
+            color: #000
+            font-family: var(--font-first)
+            text-transform: uppercase
+
+        div
+
+            ul
+                list-style: none
+                display: flex
+                gap: 20px
+                align-items: center
+
+                a
+                    color: #000
+                    text-decoration: none
+                    font-family: var(--font-first)
+
+                    li
+                        img
+                            width: 24px
+                            height: 24px
+
+                        .img_border
+                            border: 0px 3px 3px 0px solid #000
+
+.container-first-section
+    
+    background-color: #EAD9CE
+    position: relative
+    
+    .max-width
+        padding:  2rem 0
+    
+        .first-section
+            height: calc(100vh - 80px)
+            display: flex
+            align-items: center
+            justify-content: space-between
+            
+            .container-left
+                align-items: flex-start
+                display: flex
+                flex-direction: column
+                width: 100%
+                h2
+                    font-family: var(--font-first)
+                    font-size: 2rem
+                    margin-bottom: 1rem
+                    text-transform: uppercase
+                    font-weight: bold
+                
+                p
+                    font-family: var(--font-second)
+                    font-size: 1rem
+                    margin:1.5rem 0
+
+                .link-button
+                    @include button()
+
+            .container-rigth
+                align-items: center
+                display: flex
+                width: 100%
+                height: 100%
+                
+                box-sizing: border-box
+                position: static
+
+                div
+                    width: 100%
+                
+                    .img-banner
+                        position: absolute
+                        top: 50%
+                        right: 0
+                        transform: translateY(-50%)
+                        max-height: 90vh
+                        width: auto
+                        z-index: 0
+
+
+.container-second-section
+    background-color: white
+    padding: 2rem 0
+
+    .max-width
+        .second-section
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            text-align: center
+            padding: 2rem 1rem
+            width: 100%
+
+            .container_cards
+                display: flex
+                justify-content: space-between
+                gap: 2rem
+                flex-wrap: wrap
+                width: 100%
+
+                .card
+                    width: 300px
+                    height: 300px
+                    position: relative
+                    box-sizing: border-box
+
+                    img
+                        width: 100%
+                        height: 100%
+                        
+                       
+                    
+                    a
+                        text-decoration: none
+                        @include button()
+                        display: inline-block
+                        margin-top: 1rem
+                        position: absolute
+                        bottom: 20px
+                        left: 0
+                        padding: 10px 40px
+
+
+                   
+
+
+        h2
+            font-family: var(--font-first)
+            font-size: 2rem
+            color: #EAD9CE
+            text-transform: uppercase
+            margin: 1.5em 0
+
+
+        
+                
+                    
+                

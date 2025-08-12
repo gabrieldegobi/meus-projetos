@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-first: "Montserrat", sans-serif;
+  --font-second: "Edu NSW ACT Cursive", cursive;
+}
+
+.max-width {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.nav-bar {
+  border-bottom: 1px solid #bcbcbc;
+  background-color: #EAD9CE;
+}
+.nav-bar .navegation {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  align-items: center;
+}
+.nav-bar .navegation nav {
+  display: flex;
+  gap: 20px;
+}
+.nav-bar .navegation nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-bar .navegation nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-family: var(--font-first);
+}
+.nav-bar .navegation h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  font-family: var(--font-first);
+  text-transform: uppercase;
+}
+.nav-bar .navegation div ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.nav-bar .navegation div ul a {
+  color: #000;
+  text-decoration: none;
+  font-family: var(--font-first);
+}
+.nav-bar .navegation div ul a li img {
+  width: 24px;
+  height: 24px;
+}
+.nav-bar .navegation div ul a li .img_border {
+  border: 0px 3px 3px 0px solid #000;
+}
+
+.container-first-section {
+  background-color: #EAD9CE;
+  position: relative;
+}
+.container-first-section .max-width {
+  padding: 2rem 0;
+}
+.container-first-section .max-width .first-section {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-first-section .max-width .first-section .container-left {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.container-first-section .max-width .first-section .container-left h2 {
+  font-family: var(--font-first);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.container-first-section .max-width .first-section .container-left p {
+  font-family: var(--font-second);
+  font-size: 1rem;
+  margin: 1.5rem 0;
+}
+.container-first-section .max-width .first-section .container-left .link-button {
+  background-color: #b07b54;
+  color: #ead9ce;
+  border: none;
+  border-radius: 0 40px 40px 0;
+  padding: 10px 20px;
+  font-family: var(--font-first);
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.container-first-section .max-width .first-section .container-rigth {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: static;
+}
+.container-first-section .max-width .first-section .container-rigth div {
+  width: 100%;
+}
+.container-first-section .max-width .first-section .container-rigth div .img-banner {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  max-height: 90vh;
+  width: auto;
+  z-index: 0;
+}
+
+.container-second-section {
+  background-color: white;
+  padding: 2rem 0;
+}
+.container-second-section .max-width .second-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+.container-second-section .max-width .second-section .container_cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.container-second-section .max-width .second-section .container_cards .card {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  box-sizing: border-box;
+}
+.container-second-section .max-width .second-section .container_cards .card img {
+  width: 100%;
+  height: 100%;
+}
+.container-second-section .max-width .second-section .container_cards .card a {
+  text-decoration: none;
+  background-color: #b07b54;
+  color: #ead9ce;
+  border: none;
+  border-radius: 0 40px 40px 0;
+  padding: 10px 20px;
+  font-family: var(--font-first);
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin-top: 1rem;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  padding: 10px 40px;
+}
+.container-second-section .max-width h2 {
+  font-family: var(--font-first);
+  font-size: 2rem;
+  color: #EAD9CE;
+  text-transform: uppercase;
+  margin: 1.5em 0;
+}
+
+/*# sourceMappingURL=style.css.map */
