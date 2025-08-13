@@ -170,14 +170,56 @@
 
 
         h2
-            font-family: var(--font-first)
-            font-size: 2rem
-            color: #EAD9CE
-            text-transform: uppercase
-            margin: 1.5em 0
+            @include title()
 
+.container-third-section
+    background-color: #EAD9CE
+    padding: 2rem 0
 
-        
+    .max-width
+        .third-section
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            text-align: center
+
+            h2
+                @include title()
+                color: #000
+
+            p
+                font-family: var(--font-first)
+                font-size: 1.2rem
+                margin: 1.5rem 0
+                text-align: justify
+
+       
+.container-four-section
+    background-color: white
+    padding: 2rem 0
+
+    .max-width
+        .four-section
+            display: flex
+            flex-direction: column
+            justify-content: center
+            text-align: center
+            
+
+            h2
+                @include title()
+            .bestSellers-cards
+                display: flex
+                flex-direction: column
+                align-items:flex-start
                 
+
+                .left-cards,.rigth-cards    
                     
-                
+                    @include best-sellers-cards()
+                    margin: 2rem 0
+
+                .rigth-cards
+                    justify-content: flex-end
+
