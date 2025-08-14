@@ -10,8 +10,9 @@
 
 .max-width
     @include width()
- 
-   
+
+
+
 
 .nav-bar
     border-bottom: 1px solid #bcbcbcff
@@ -22,7 +23,7 @@
         justify-content: space-between
         padding: 20px 0
         align-items: center
-        
+
         nav
             display: flex
             gap: 20px
@@ -67,35 +68,36 @@
                             border: 0px 3px 3px 0px solid #000
 
 .container-first-section
-    
+
     background-color: #EAD9CE
     position: relative
     
+
     .max-width
-        padding:  2rem 0
-    
+        padding: 2rem 0
+
         .first-section
-            height: calc(100vh - 80px)
+            height: calc(100vh - 100px)
             display: flex
             align-items: center
-            justify-content: space-between
-            
+
             .container-left
                 align-items: flex-start
                 display: flex
                 flex-direction: column
                 width: 100%
+                
                 h2
                     font-family: var(--font-first)
                     font-size: 2rem
                     margin-bottom: 1rem
                     text-transform: uppercase
                     font-weight: bold
-                
+
                 p
                     font-family: var(--font-second)
                     font-size: 1rem
-                    margin:1.5rem 0
+                    margin: 1.5rem 0
 
                 .link-button
                     @include button()
@@ -105,22 +107,21 @@
                 display: flex
                 width: 100%
                 height: 100%
-                
                 box-sizing: border-box
                 position: static
 
                 div
                     width: 100%
-                
+                    height: 100%
+
                     .img-banner
                         position: absolute
                         top: 50%
                         right: 0
                         transform: translateY(-50%)
-                        max-height: 90vh
+                        max-height: 75vh
                         width: auto
                         z-index: 0
-
 
 .container-second-section
     background-color: white
@@ -152,9 +153,7 @@
                     img
                         width: 100%
                         height: 100%
-                        
-                       
-                    
+
                     a
                         text-decoration: none
                         @include button()
@@ -164,10 +163,6 @@
                         bottom: 20px
                         left: 0
                         padding: 10px 40px
-
-
-                   
-
 
         h2
             @include title()
@@ -194,7 +189,6 @@
                 margin: 1.5rem 0
                 text-align: justify
 
-       
 .container-four-section
     background-color: white
     padding: 2rem 0
@@ -205,21 +199,215 @@
             flex-direction: column
             justify-content: center
             text-align: center
-            
 
             h2
                 @include title()
             .bestSellers-cards
                 display: flex
                 flex-direction: column
-                align-items:flex-start
-                
+                align-items: flex-start
 
-                .left-cards,.rigth-cards    
-                    
+                .left-cards,.rigth-cards
+
                     @include best-sellers-cards()
                     margin: 2rem 0
 
                 .rigth-cards
+                    width: 100%
                     justify-content: flex-end
 
+
+.container-five-section
+    background-color: #EAD9CE
+    position: relative
+
+    .max-width
+
+        .five-section
+            display: flex
+            align-items: center
+            height: 600px
+            justify-content: center
+
+            .img-left
+                align-items: center
+                display: flex
+                width: 50%
+                height: 100%
+                
+                .img-banner
+                    width: 100%
+                    height: 100%
+
+                    img
+                        position: absolute
+                        top: 50%
+                        transform: translateY(-50%)
+                        left: 0
+                        height: 100%
+
+            .text-rigth
+                width: 50%
+                height: 100%
+                display: flex
+                flex-direction: column
+                
+                justify-content: center
+
+                h3
+                    @include title()
+                    color:  #000
+
+                p
+                    font-family: var(--font-first)
+
+                a
+                   margin: 4em 0
+
+.button-inverter
+    display: flex
+    justify-content: flex-end
+    a
+        @include button()
+        margin-top: 1rem
+        width: 150px
+        text-align: center
+        border-radius: 40px 0 0 40px
+
+
+.container-six-section
+    
+
+    .max-width
+        .six-section
+            display: flex
+            flex-direction: column
+            align-items: center
+
+            .container-text
+                display: flex
+                flex-direction: column
+                align-items: center
+                margin: 2rem 0
+                h2
+                    @include title()
+                    color: #000
+
+                p
+                    font-family: var(--font-first)
+                    max-width: 60%
+                    text-align: center
+
+            .container-card-img
+                width: 100%
+                display: flex
+                align-items: center
+                justify-content: space-between
+                flex-wrap: wrap
+                padding: 2rem 0
+                
+
+                .card-img
+                    width: 250px
+                    height: 350px
+                    position: relative
+                    box-sizing: border-box
+                    flex-wrap: wrap
+
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+            .button-inverter-container
+                display: flex
+                justify-content: flex-end
+                width: 100%
+                margin-top: 2rem
+
+                .button-inverter
+                    @include button()
+                    width: 150px
+                    justify-content: center
+                    border-radius: 40px 0 0 40px
+
+
+.container-seven-section
+    background-color: #EAD9CE
+    position: relative
+    margin: 3rem 0
+
+    .max-width
+        .seven-section
+            height: 600px
+            display: flex
+            align-items: center
+            .container-left
+                width: 60%
+                h2
+                    @include title()
+                    color: #000
+
+                p
+                    font-family: var(--font-first)
+                    font-size: 1.2rem
+                
+                .button
+                    display: flex
+                    width: 100%
+                    margin: 2rem 0
+                    
+                    a
+                        @include button()
+                        width: 150px
+                        text-align: center
+                   
+
+            .container-rigth
+                .img-banner
+                    height: 100%
+                    img
+                        position: absolute
+                        top: 50%
+                        right: 0
+                        transform: translateY(-50%)
+                        height: 100%
+                        z-index: 0
+
+.container-eigth-section
+    .max-width
+        .eigth-section
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            text-align: center
+
+            h2
+                @include title()
+                color: #000
+                margin: 1rem 0
+
+            p
+                font-family: var(--font-first)
+                font-size: 1.2rem
+                margin: 0 0
+                text-align: justify
+                
+
+            .container-img
+                display: flex
+                justify-content: space-between
+                gap: 2rem
+                align-items: center
+                width: 100%
+                flex-wrap: wrap
+                margin: 3rem 0
+                .only-img
+                    width: 250px
+                    height: 250px
+                    position: relative
+                    box-sizing: border-box
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
