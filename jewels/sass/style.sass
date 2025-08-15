@@ -11,9 +11,6 @@
 .max-width
     @include width()
 
-
-
-
 .nav-bar
     border-bottom: 1px solid #bcbcbcff
     background-color: #EAD9CE
@@ -66,27 +63,45 @@
 
                         .img_border
                             border: 0px 3px 3px 0px solid #000
+        .menu-hamburguer
+            display: none
+            font-size: 1.5rem
+            cursor: pointer
+@media (max-width: 992px)
+    .nav-bar
+        .navegation
+            padding: 20px 1rem
+            nav
+                display: none
 
+            div
+                ul
+                    display: none
+
+            .menu-hamburguer
+                display: block
 .container-first-section
 
     background-color: #EAD9CE
     position: relative
-    
+
 
     .max-width
         padding: 2rem 0
 
         .first-section
-            height: calc(100vh - 100px)
+            height: auto
             display: flex
             align-items: center
+            padding: 0 1rem
+            height: calc( 100vh - 100px )
 
             .container-left
                 align-items: flex-start
                 display: flex
                 flex-direction: column
-                width: 100%
-                
+                width: 80%
+
                 h2
                     font-family: var(--font-first)
                     font-size: 2rem
@@ -101,11 +116,14 @@
 
                 .link-button
                     @include button()
+                img
+                   display: none
 
             .container-rigth
                 align-items: center
                 display: flex
                 width: 100%
+                max-width: 600px
                 height: 100%
                 box-sizing: border-box
                 position: static
@@ -122,10 +140,50 @@
                         max-height: 75vh
                         width: auto
                         z-index: 0
+@media (max-width: 992px)
+    .container-first-section
+        
+        
+        .max-width
+            padding: 0
+            .first-section
+                flex-direction: column
+                text-align: center
+                justify-content: center
+                height: 100vh
+
+                .container-left
+                    width: 100%
+                    margin-bottom: 2rem
+                    align-items:  center
+                    h2
+                        font-size: 1.5rem
+                        color: white
+                    p
+                        color: white
+                    
+                    .link-buttom
+                        border-radius: 40px
+
+                    img
+                        display: block
+                        width: 100%
+                        margin: 1rem 0
+                        max-height: 400px
+
+                .container-rigth
+                    width: 100%
+                    height: auto
+
+                    div
+                        width: 100%
+                        height: auto
+
+                        .img-banner
+                            display: none
 
 .container-second-section
     background-color: white
-    padding: 2rem 0
 
     .max-width
         .second-section
@@ -136,6 +194,7 @@
             text-align: center
             padding: 2rem 1rem
             width: 100%
+            box-sizing: border-box
 
             .container_cards
                 display: flex
@@ -149,6 +208,7 @@
                     height: 300px
                     position: relative
                     box-sizing: border-box
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
                     img
                         width: 100%
@@ -163,13 +223,36 @@
                         bottom: 20px
                         left: 0
                         padding: 10px 40px
+                .card:hover
+                    transform: scale(1.05)
+                    transition: transform 0.3s ease-in-out
 
         h2
             @include title()
+@media (max-width: 992px)
+    .container-second-section
+        padding: 2rem 0
+        .max-width
+            .second-section
 
+                padding: 3rem 1rem
+                h2
+                    font-size: 1.5rem
+
+                .container_cards
+                    justify-content: center
+                    align-items: center
+
+                    .card
+
+                        width: 250px
+                        height: 250px
+
+                        img
+                            height: auto
 .container-third-section
     background-color: #EAD9CE
-    padding: 2rem 0
+    padding: 2rem
 
     .max-width
         .third-section
@@ -206,6 +289,7 @@
                 display: flex
                 flex-direction: column
                 align-items: flex-start
+                
 
                 .left-cards,.rigth-cards
 
@@ -215,7 +299,20 @@
                 .rigth-cards
                     width: 100%
                     justify-content: flex-end
+@media (max-width: 992px)
+    .container-four-section
+        background-color: white
+        padding: 2rem 0
 
+        .max-width
+            .four-section
+
+                .bestSellers-cards
+
+                    align-items: center
+
+                    .rigth-cards
+                        justify-content: center
 
 .container-five-section
     background-color: #EAD9CE
@@ -226,7 +323,7 @@
         .five-section
             display: flex
             align-items: center
-            height: 600px
+            height: 400px
             justify-content: center
 
             .img-left
@@ -234,7 +331,7 @@
                 display: flex
                 width: 50%
                 height: 100%
-                
+
                 .img-banner
                     width: 100%
                     height: 100%
@@ -251,19 +348,51 @@
                 height: 100%
                 display: flex
                 flex-direction: column
-                
+
                 justify-content: center
 
                 h3
                     @include title()
-                    color:  #000
+                    color: #000
 
                 p
                     font-family: var(--font-first)
 
                 a
-                   margin: 4em 0
+                    margin: 4em 0
+@media (max-width: 992px)
+    .container-five-section
+        padding: 0 2rem
 
+        .max-width
+
+            .five-section
+            
+                height: auto
+                
+
+                .img-left
+                    display: none
+
+                    
+
+                .text-rigth
+                    width: 100%
+                    height: 100%
+                    display: flex
+                    flex-direction: column
+
+                    justify-content: center
+
+                    h3
+                        @include title()
+                        color: #000
+
+                    p
+                        font-family: var(--font-first)
+
+                    a
+                        margin: 4em 0
 .button-inverter
     display: flex
     justify-content: flex-end
@@ -274,9 +403,7 @@
         text-align: center
         border-radius: 40px 0 0 40px
 
-
 .container-six-section
-    
 
     .max-width
         .six-section
@@ -304,20 +431,24 @@
                 align-items: center
                 justify-content: space-between
                 flex-wrap: wrap
-                padding: 2rem 0
-                
+                padding: 2rem
+                box-sizing: border-box
 
                 .card-img
                     width: 250px
                     height: 350px
                     position: relative
                     box-sizing: border-box
-                    flex-wrap: wrap
 
                     img
                         width: 100%
                         height: 100%
                         object-fit: cover
+
+                .card-img:hover
+                    transform: scale(1.05)
+                    transition: transform 0.3s ease-in-out
+
             .button-inverter-container
                 display: flex
                 justify-content: flex-end
@@ -329,7 +460,51 @@
                     width: 150px
                     justify-content: center
                     border-radius: 40px 0 0 40px
+@media (max-width: 992px)
+    .container-six-section
 
+        .max-width
+            .six-section
+                
+                .container-text
+                    h2
+                       
+
+                    p
+                        max-width: 100%
+                        text-align: center
+                .container-card-img
+                    
+                    justify-content: center
+                    
+                    gap: 2rem
+
+                    .card-img
+                        width: 250px
+                        height: 350px
+                        position: relative
+                        box-sizing: border-box
+
+                        img
+                            width: 100%
+                            height: 100%
+                            object-fit: cover
+
+                    .card-img:hover
+                        transform: scale(1.05)
+                        transition: transform 0.3s ease-in-out
+
+                .button-inverter-container
+                    display: flex
+                    justify-content: flex-end
+                    width: 100%
+                    margin-top: 2rem
+
+                    .button-inverter
+                        @include button()
+                        width: 150px
+                        justify-content: center
+                        border-radius: 40px 0 0 40px
 
 .container-seven-section
     background-color: #EAD9CE
@@ -338,9 +513,10 @@
 
     .max-width
         .seven-section
-            height: 600px
+            height: 500px
             display: flex
             align-items: center
+            padding: 0 1rem
             .container-left
                 width: 60%
                 h2
@@ -350,17 +526,16 @@
                 p
                     font-family: var(--font-first)
                     font-size: 1.2rem
-                
+
                 .button
                     display: flex
                     width: 100%
                     margin: 2rem 0
-                    
+
                     a
                         @include button()
                         width: 150px
                         text-align: center
-                   
 
             .container-rigth
                 .img-banner
@@ -372,7 +547,24 @@
                         transform: translateY(-50%)
                         height: 100%
                         z-index: 0
+@media (max-width: 992px)
+    .container-seven-section
+        background-color: #EAD9CE
+        position: relative
+        margin:3rem 0
 
+        .max-width
+            .seven-section
+                height: 600px
+                display: flex
+                align-items: center
+                padding: 0 1rem
+                .container-left
+                    width: 100%
+                    
+                .container-rigth
+                    display: none
+                   
 .container-eigth-section
     .max-width
         .eigth-section
@@ -381,6 +573,7 @@
             align-items: center
             justify-content: center
             text-align: center
+            padding: 0 1rem
 
             h2
                 @include title()
@@ -392,7 +585,6 @@
                 font-size: 1.2rem
                 margin: 0 0
                 text-align: justify
-                
 
             .container-img
                 display: flex
@@ -401,13 +593,140 @@
                 align-items: center
                 width: 100%
                 flex-wrap: wrap
-                margin: 3rem 0
+                margin: 3rem 0 5rem 0
                 .only-img
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
                     width: 250px
                     height: 250px
                     position: relative
                     box-sizing: border-box
+
                 img
                     width: 100%
                     height: 100%
                     object-fit: cover
+
+                .only-img:hover
+                    transform: scale(1.05)
+                    transition: transform 0.3s ease-in-out
+@media (max-width: 992px)
+    .container-eigth-section
+        .max-width
+            .eigth-section
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                text-align: center
+                padding: 0 1rem
+
+                .container-img
+                    display: flex
+                    justify-content: center
+                    gap: 2rem
+                    align-items: center
+                    width: 100%
+                    flex-wrap: wrap
+                    margin: 3rem 0 5rem 0
+
+                    .only-img
+                        
+                        width: 350px
+                        height: 350px
+                        position: relative
+                        box-sizing: border-box
+
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+
+                    .only-img:hover
+                        transform: scale(1.05)
+                        transition: transform 0.3s ease-in-out
+
+.container-footer
+    background-color: #EAD9CE
+    padding: 1rem
+    border-bottom: 1px solid #bcbcbcff
+    .max-width
+        .footer
+            display: flex
+            flex-direction: column
+            align-items: center
+
+            .footer-top
+                display: flex
+                justify-content: space-between
+                width: 100%
+
+                .contact-us
+                    max-width: 600px
+                    h3
+                        font-family: var(--font-first)
+                        color: #000
+                        font-size: 1.2rem
+
+                    p
+                        font-family: var(--font-first)
+                        font-size: 1rem
+                        margin: 1rem 0
+
+                    ul
+                        list-style: none
+                        display: flex
+                        gap: 20px
+                        flex-wrap: wrap
+
+                        li
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            width: 30px
+                            height: 30px
+                            padding: 10px
+                            border: 2px solid #b07b54
+                            border-radius: 50%
+
+                            &:hover
+                                border-color: #000
+                            a
+                                text-decoration: none
+                                color: #000
+                                font-family: var(--font-first)
+                                font-size: 0.9rem
+                                text-transform: uppercase
+
+                .container-links
+                    display: flex
+
+                    ul
+                        list-style: none
+
+                        li
+                            margin: 0.5rem 0
+                            font-family: var(--font-first)
+                            color: #b07b54
+                            a
+                                text-decoration: none
+                                color: #000
+                                font-family: var(--font-first)
+                                font-size: 0.9rem
+                                text-transform: uppercase
+                                &:hover
+                                    text-decoration: underline
+
+.container-creator
+    background-color: #EAD9CE
+    color: white
+    text-align: center
+    padding: .5rem 0
+
+    p
+        margin: 0.5rem 0
+
+    .creator, a
+        font-family: var(--font-second)
+        font-size: 0.8rem
+        text-decoration: none
+        color: white
